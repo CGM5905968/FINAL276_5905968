@@ -4,11 +4,13 @@ using UnityEngine;
 
 using SocketIO;
 
+using UnityEngine.UI;
+
 public class Network : MonoBehaviour
 {
     static SocketIOComponent socket;
 
-
+    public Text getText;
 
     void Start()
     {
@@ -32,6 +34,8 @@ public class Network : MonoBehaviour
 
         JSONObject JSONobject = obj.data;
 
+        getText.text = JSONobject["text"].ToString();
+
         Debug.Log(JSONobject["text"].ToString());
     }
 
@@ -41,6 +45,8 @@ public class Network : MonoBehaviour
         JSONobject.AddField("mynum",num);
 
         socket.Emit("Check", JSONobject);
+
+        print("send value");
         
         //string data = JsonUtility.ToJson(num);
         //socket.Emit("Check", new JSONObject(data));

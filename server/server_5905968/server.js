@@ -32,7 +32,7 @@ io.on("connection",function(socket){
         }
         else if(data.mynum > RandomNum)
         {
-            var result = {text:"Most"}
+            var result = {text:"More"}
         }
         
         socket.emit("getValue",result);

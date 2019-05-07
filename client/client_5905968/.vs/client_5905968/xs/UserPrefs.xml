@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{E611D7B7-10FA-B66F-89BF-55ED519EA749}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SendValue.cs">
     <Files>
-      <File FileName="Assets/Scripts/Network.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SendValue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TextCTRScript.cs" Line="13" Column="5" />
+      <File FileName="Assets/Scripts/Network.cs" Line="37" Column="9" NotebookId="1" />
+      <File FileName="Assets/Scripts/SendValue.cs" Line="17" Column="53" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
