@@ -70,7 +70,6 @@ io.on("connection",function(socket){
         RandomNum = 0;
         RandomNum = Math.floor(Math.random() * 100);
 
-
-
+        console.log(RandomNum);
     }
 });
