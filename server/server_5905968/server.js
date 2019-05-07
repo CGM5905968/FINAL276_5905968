@@ -2,8 +2,8 @@ var port = process.env.PORT || 3000;
 var io = require('socket.io')(port);
 
 //Adding
-var shortId = require('shortid');
-var players = [];
+/*var shortId = require('shortid');
+var players = [];*/
 
 
 var RandomNum = Math.floor(Math.random() * 100);
@@ -15,7 +15,7 @@ console.log(RandomNum);
 io.on("connection",function(socket){
 
     //Adding
-    var thisPlayerId = shortId.generate();
+    /*var thisPlayerId = shortId.generate();
     players[thisPlayerId] = player;
     console.log("client connected, id = ", thisPlayerId);
     socket.emit('register', {id:thisPlayerId});
@@ -29,7 +29,7 @@ io.on("connection",function(socket){
         console.log('client disconected');
         delete players[thisPlayerId];
         socket.broadcast.emit('disconnected', {id:thisPlayerId});
-    });
+    });*/
 
 
     console.log("client connect");
