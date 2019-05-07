@@ -11,6 +11,10 @@ public class Network : MonoBehaviour
     static SocketIOComponent socket;
 
     public Text getText;
+    public Text playText;
+
+    public GameObject currentPlayer;
+    public Spawner spawner;
 
     void Start()
     {
@@ -19,12 +23,22 @@ public class Network : MonoBehaviour
         socket.On("open", OnConnected);
 
         socket.On("getValue", GetMessage);
-        
+
+        socket.On("register", OnRegister);
+
+
     }
 
     private void OnConnected(SocketIOEvent obj)
     {
         Debug.Log("conected");
+    }
+
+    private void OnRegister(SocketIOEvent obj)
+    {
+        Debug.Log("registered id = " + obj.data);
+        spawner.AddPlayer(obj.data["id"].str, currentPlayer);
+        currentPlayer.GetComponent<NetWorkEntity>().id = obj.data["id"].str;
     }
 
     private void GetMessage(SocketIOEvent obj)
@@ -38,6 +52,7 @@ public class Network : MonoBehaviour
 
         Debug.Log(JSONobject["text"].ToString());
     }
+
 
     public void SendValue(int num)
     {

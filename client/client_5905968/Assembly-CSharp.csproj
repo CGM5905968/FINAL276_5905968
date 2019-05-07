@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Network.cs" />
+    <Compile Include="Assets\Scripts\NetWorkEntity.cs" />
     <Compile Include="Assets\Scripts\SendValue.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TextCTRScript.cs" />
     <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
     <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
