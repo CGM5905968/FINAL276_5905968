@@ -49,6 +49,8 @@ io.on("connection",function(socket){
         if(data.mynum == RandomNum)
         {
             var result = {text:"Win"}
+            NewNum();
+            
         }
         else if(data.mynum < RandomNum)
         {
@@ -63,4 +65,12 @@ io.on("connection",function(socket){
         
         
     });
+    void NewNum()
+    {
+        RandomNum = 0;
+        RandomNum = Math.floor(Math.random() * 100);
+
+
+
+    }
 });
